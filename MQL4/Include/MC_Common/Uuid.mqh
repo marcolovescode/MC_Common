@@ -12,7 +12,9 @@
 #endif
 
 CsvString UuidPool(NULL, 0);
-bool IgnorePool = false;
+// Net-generated UUID server does not exist right now, so dummy it out.
+// Just generate UUID's locally.
+bool IgnorePool = true;
 
 string GetUuid() {
     if(IgnorePool || (UuidPool.isLineEnding() && !GetUuidPoolNet(UuidPool))) {
